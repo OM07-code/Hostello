@@ -1,0 +1,5 @@
+{
+  "error": "Failed to execute AI allocation.",
+  "details": "{\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}",
+  "stack": "ApiError: {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}\n    at throwErrorIfNotOK (E:\\Workspace\\Hostello\\backend\\node_modules\\@google\\genai\\dist\\node\\index.cjs:13363:30)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async E:\\Workspace\\Hostello\\backend\\node_modules\\@google\\genai\\dist\\node\\index.cjs:13066:13\n    at async Models.generateContent (E:\\Workspace\\Hostello\\backend\\node_modules\\@google\\genai\\dist\\node\\index.cjs:14467:24)\n    at async exports.runGeminiAllocation (E:\\Workspace\\Hostello\\backend\\src\\controllers\\allocation.controller.js:118:24)"
+}

@@ -1,0 +1,24 @@
+/* Hostello Core UI Utility Overrides */
+/* The entire specific layout engine relies purely on Tailwind semantics mapping back to index.css */
+
+/* Hide native scrollbar but allow scrolling */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Base generic utilities for data tables */
+.table-container {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-subtle);
+  background: var(--color-surface);
+}
+
+.table-header {
+  background: var(--color-surface-hover);
+  border-bottom: 1px solid var(--color-border-default);
+}

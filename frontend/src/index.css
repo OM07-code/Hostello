@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-surface-hover: var(--surface-hover);
+  --color-surface-overlay: var(--surface-overlay);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+
+  --color-border-default: var(--border-default);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-strong: var(--border-strong);
+  --color-border-focus: var(--border-focus);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-active: var(--primary-active);
+  
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+}
+
+@layer base {
+  :root {
+    /* LIGHT THEME (From Specification) */
+    --background: #F8FAFC; 
+    --surface: #FFFFFF;
+    --surface-elevated: #FDFDFD;
+    --surface-hover: #F1F5F9;
+    --surface-overlay: rgba(255, 255, 255, 0.9);
+    
+    --text-primary: #0F172A; /* Neutral */
+    --text-secondary: #334155;
+    --text-muted: #64748B;
+    
+    --border-default: #E2E8F0;
+    --border-subtle: #F1F5F9;
+    --border-strong: #CBD5E1;
+    --border-focus: #2563EB;
+    
+    --primary: #2563EB; /* Primary Blue */
+    --primary-hover: #1D4ED8;
+    --primary-active: #1E40AF;
+    
+    --secondary: #6275AF; /* Secondary Slate */
+    --tertiary: #BC4800; /* Tertiary Rust */
+
+    --success: #16A34A;
+    --warning: #D97706;  
+    --error: #DC2626;
+  }
+
+  .dark {
+    /* NIGHT THEME */
+    --background: #020617; /* Deep Slate */
+    --surface: #0F172A; /* Slate 900 */
+    --surface-elevated: #1E293B; /* Slate 800 */
+    --surface-hover: #1E293B; 
+    --surface-overlay: rgba(15, 23, 42, 0.9);
+    
+    --text-primary: #F8FAFC;
+    --text-secondary: #CBD5E1;
+    --text-muted: #94A3B8;
+    
+    --border-default: #334155;
+    --border-subtle: #1E293B;
+    --border-strong: #475569;
+    --border-focus: #3B82F6;
+    
+    --primary: #3B82F6; /* Blue 500 */
+    --primary-hover: #2563EB; /* Blue 600 */
+    --primary-active: #1D4ED8; /* Blue 700 */
+    
+    --secondary: #94A3B8; 
+    --tertiary: #EA580C;
+
+    --success: #22C55E;
+    --warning: #F59E0B;
+    --error: #EF4444;
+  }
+
+  * {
+    border-color: var(--border-default);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--text-primary);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    /* Soft standard transition for entire view changes */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
